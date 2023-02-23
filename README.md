@@ -1,9 +1,19 @@
-# Getting Started
+### Using npm/yarn
+
+1. Install dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+yarn install
+```
+
+2. Build the project:
+
+```bash
+yarn build
+```
+
+3. Run the server:
+
+```bash
+yarn start
 ```
