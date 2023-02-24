@@ -4,7 +4,7 @@ import { ShellProvider } from '@/utils/shellProvider'
 import { ThemeProvider } from '@/utils/themeProvider'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const App = ({ Component, pageProps }: AppProps) => {
   const inputRef = React.useRef<HTMLInputElement>(null)
@@ -14,6 +14,10 @@ const App = ({ Component, pageProps }: AppProps) => {
       inputRef.current.focus();
     }
   }
+
+  useEffect(() => {
+    localStorage.setItem('visitedAt', new Date().toString());
+  }, []);
 
   return (
     <ThemeProvider>

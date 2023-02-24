@@ -1,6 +1,6 @@
 import { formatDistanceToNow } from 'date-fns';
 import packageJson from '@/package.json';
-import themes from '@/themes.json';
+import { getCurrentTheme } from '../theme';
 
 const macos = `
                     'c.
@@ -86,8 +86,7 @@ const getPlatform = (): 'Unknown' | 'Windows' | 'MacOS' | 'Linux' => {
 
 const getMainColor = () => {
   const platform = getPlatform();
-  const themeName = localStorage.getItem('theme');
-  const theme = themes.find((theme) => theme.name.toLowerCase() === themeName);
+  const theme = getCurrentTheme();
 
   switch (platform) {
     case 'MacOS':
@@ -133,7 +132,7 @@ const getInfo = () => {
     packages.length + devPackages.length
   } (npm)\n`;
   message += `<span style="color: ${mainColor}">Resolution</span>: ${resolution}\n`;
-  message += `<span style="color: ${mainColor}">Shell</span>: sebastian-web\n`;
+  message += `<span style="color: ${mainColor}">Shell</span>: schleeshell\n`;
   message += `<span style="color: ${mainColor}">Theme</span>: ${theme}\n`;
   message += `<span style="color: ${mainColor}">License</span>: ${packageJson.license}\n`;
   message += `<span style="color: ${mainColor}">Version</span>: ${packageJson.version}\n`;

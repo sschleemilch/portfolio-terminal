@@ -31,14 +31,14 @@ export const ThemeProvider: React.FC<Props> = ({ children }) => {
     );
 
     if (index === -1) {
-      return `Theme '${name}' not found. Try 'theme ls' to see the list of available themes.`;
+      return `<span style="color: ${theme.red}">Theme '${name}' not found. Try 'theme ls' to see the list of available themes.</span>`;
     }
 
     _setTheme(Themes[index]);
 
     localStorage.setItem('theme', name);
 
-    return `Theme ${Themes[index].name} set successfully!`;
+    return `<span style="color: ${Themes[index].green}">Theme <b>${Themes[index].name}</b> set successfully!</span>`;
   };
 
   return (
