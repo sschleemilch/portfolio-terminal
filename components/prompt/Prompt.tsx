@@ -25,7 +25,7 @@ export const Prompt = () => {
           color: theme.white,
         }}
       >
-        @
+      &nbsp;on&nbsp;
       </span>
       <span
         style={{
@@ -36,10 +36,16 @@ export const Prompt = () => {
       </span>
       <span
         style={{
-          color: theme.white,
+          color: theme.blue,
         }}
       >
-        :$ ~
+      &nbsp;~&nbsp;
+      </span>
+      <span
+        style={{
+          color: theme.white
+        }}>
+      ❯
       </span>
     </div>
   );

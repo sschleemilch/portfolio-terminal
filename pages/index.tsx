@@ -32,7 +32,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
         style={{
           borderColor: theme.yellow,
           padding: config.border ? 16 : 8,
-          borderWidth: config.border ? 2: 0,
+          borderWidth: config.border ? 3: 0,
         }}
       >
         <div ref={containerRef} className="overflow-y-auto h-full">
