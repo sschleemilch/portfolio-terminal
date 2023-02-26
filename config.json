@@ -1,4 +1,8 @@
 {
+    "social": {
+        "github": "sschleemilch"
+    },
+    "aboutURL": "https://raw.githubusercontent.com/sschleemilch/cookiecutter-python-cli/main/README.md",
     "theme": "nord",
     "border": true
 }
