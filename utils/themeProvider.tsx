@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Themes from '@/themes.json';
 import { Theme } from '@/interfaces/theme';
 import config from '@/config.json';
+import { cmd_error, cmd_ok } from './commandOutput';
 
 export interface ThemeContextType {
   setTheme: (name: string) => string;
@@ -31,14 +32,14 @@ export const ThemeProvider: React.FC<Props> = ({ children }) => {
     );
 
     if (index === -1) {
-      return `<span style="color: ${theme.red}">Theme '${name}' not found. Try 'theme ls' to see the list of available themes.</span>`;
+      return cmd_error(`Theme '${name}' not found. Try 'theme ls' to see the list of available themes.`);
     }
 
     _setTheme(Themes[index]);
 
     localStorage.setItem('theme', name);
 
-    return `<span style="color: ${Themes[index].green}">Theme <b>${Themes[index].name}</b> set successfully!</span>`;
+    return cmd_ok(`Theme set: <b>${Themes[index].name}</b>`);
   };
 
   return (

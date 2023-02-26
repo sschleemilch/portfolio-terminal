@@ -22,9 +22,3 @@ export const getProjects = async () => {
 
   return data;
 };
-
-export const getBio = async () => {
-  const { data } = await axios.get(config.aboutURL);
-
-  return data;
-};

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { History } from '@/interfaces/history';
 import * as bin from '@/utils/bin';
 import { useTheme } from './themeProvider';
+import { cmd_error } from './commandOutput';
 
 interface ShellContextType {
   history: History[];
@@ -84,14 +85,13 @@ export const ShellProvider: React.FC<ShellProviderProps> = ({ children }) => {
         break;
       default: {
         if (Object.keys(bin).indexOf(cmd) === -1) {
-          setHistory(`Command not found: ${cmd}. Try 'help' to get started.`);
+          setHistory(cmd_error(`Command not found: ${cmd}. Try 'help' to get started.`));
         } else {
           try {
             const output = await bin[cmd](args);
-
             setHistory(output);
           } catch (error) {
-            setHistory(error.message);
+            setHistory(cmd_error(error.message));
           }
         }
       }

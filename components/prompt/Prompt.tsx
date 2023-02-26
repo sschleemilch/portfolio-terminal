@@ -18,7 +18,7 @@ export const Prompt = () => {
           color: theme.yellow,
         }}
       >
-        guest
+        guest
       </span>
       <span
         style={{
@@ -32,14 +32,15 @@ export const Prompt = () => {
           color: theme.green,
         }}
       >
-        {hostname}
+        {hostname}
       </span>
+      &nbsp;at
       <span
         style={{
           color: theme.blue,
         }}
       >
-      &nbsp;~&nbsp;
+      &nbsp;&nbsp;
       </span>
       <span
         style={{
