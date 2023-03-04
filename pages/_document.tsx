@@ -29,6 +29,7 @@ export default function Document() {
             sizes="16x16"
             href="/favicon-16x16.png"
           />
+          <link rel="manifest" href="/site.webmanifest"></link>
           <meta name="msapplication-TileColor" content="#262626" />
           <meta name="theme-color" content="#D79921" />
           <meta name="description" content="Portfolio | Sebastian Schleemilch" />

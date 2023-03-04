@@ -24,7 +24,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
   return (
     <>
       <Head>
-        <title>Schleemilch | Home</title>
+        <title>Schleeshell | ¯\_(ツ)_/¯</title>
       </Head>
 
       <div

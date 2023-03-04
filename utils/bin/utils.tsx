@@ -21,7 +21,7 @@ export const help = async (args: string[]): Promise<string> => {
 };
 
 export const whoami = async (args: string[]): Promise<string> => {
-    return cmd_info('guest');
+    return 'guest';
 };
 
 export const echo = async (args: string[]): Promise<string> => {

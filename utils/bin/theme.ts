@@ -1,11 +1,12 @@
 import Themes from '@/themes.json';
+import { cmd_info } from '../commandOutput';
 
 export const theme = async (
   args: string[],
   callback?: (value: string) => string,
 ): Promise<string> => {
   if (args.length === 0) {
-    return `Usage: theme [arg]
+    return cmd_info(`Usage: theme [arg]
 Args:
   - ls: list all themes
   - set: set a theme
@@ -13,7 +14,7 @@ Args:
 
 Example: 
   theme ls # to list all themes
-  theme set Gruvbox # to set a theme`;
+  theme set Gruvbox # to set a theme`);
   }
 
   switch (args[0]) {
