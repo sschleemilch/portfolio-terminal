@@ -1,18 +1,27 @@
 import packageJson from '../../package.json'
 import { cmd_error, cmd_info } from '../commandOutput';
+import { getCurrentTheme } from '../theme';
 import * as bin from './index'
 
 export const banner = (args?: string[]): string => {
+    const theme = getCurrentTheme()
     return `
 ███████╗ ██████╗██╗  ██╗██╗     ███████╗███████╗███╗   ███╗██╗██╗      ██████╗██╗  ██╗
 ██╔════╝██╔════╝██║  ██║██║     ██╔════╝██╔════╝████╗ ████║██║██║     ██╔════╝██║  ██║
 ███████╗██║     ███████║██║     █████╗  █████╗  ██╔████╔██║██║██║     ██║     ███████║
 ╚════██║██║     ██╔══██║██║     ██╔══╝  ██╔══╝  ██║╚██╔╝██║██║██║     ██║     ██╔══██║
 ███████║╚██████╗██║  ██║███████╗███████╗███████╗██║ ╚═╝ ██║██║███████╗╚██████╗██║  ██║
-╚══════╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝╚═╝     ╚═╝╚═╝╚══════╝ ╚═════╝╚═╝  ╚═╝v${packageJson.version}
+╚══════╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝╚═╝     ╚═╝╚═╝╚══════╝ ╚═════╝╚═╝  ╚═╝<span style="color: ${theme.green}">v${packageJson.version}</span>
 
+A portfolio website in terminal style, just because I <span style="color: ${theme.red}"></span>  using and writing clean CLIs!
+
+---
 ${cmd_info("Type 'help' to see list of available commands.")}
-  `;
+---
+
+A lot of credits to <a href="https://github.com/m4tt72/terminal">m4tt72</a> for providing the base!
+
+`;
   };
 
 export const help = async (args: string[]): Promise<string> => {

@@ -1,4 +1,8 @@
-### Using npm/yarn
+# Portfolio terminal style website
+
+Credits to [m4tt74](https://github.com/m4tt72/terminal)!
+
+## Usage
 
 1. Install dependencies:
 

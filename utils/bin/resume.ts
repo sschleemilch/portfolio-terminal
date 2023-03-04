@@ -1,7 +1,7 @@
 import { cmd_info } from "../commandOutput";
 import { getCurrentTheme } from "../theme";
 
-export const history = async (args?: string[]): Promise<string> => {
+export const resume = async (args?: string[]): Promise<string> => {
     const theme = getCurrentTheme()
 
     return `  <span style="color: ${theme.blue}">  Work</span>

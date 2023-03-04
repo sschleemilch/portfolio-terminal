@@ -34,13 +34,13 @@ export const Prompt = () => {
       >
         {hostname}
       </span>
-      &nbsp;at
+      &nbsp;with
       <span
         style={{
-          color: theme.blue,
+          color: theme.cyan
         }}
       >
-      &nbsp;&nbsp;
+      &nbsp; {theme.name}&nbsp;
       </span>
       <span
         style={{
