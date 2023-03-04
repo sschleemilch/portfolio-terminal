@@ -3,6 +3,13 @@ import { cmd_error, cmd_info } from '../commandOutput';
 import { getCurrentTheme } from '../theme';
 import * as bin from './index'
 
+export const repo = async (args?: string[]): Promise<string> => {
+    setTimeout(function () {
+      window.open('https://github.com/sschleemilch/portfolio-terminal', '_blank');
+    }, 1000);
+    return 'Opening repository...';
+};
+
 export const banner = (args?: string[]): string => {
     const theme = getCurrentTheme()
     return `
