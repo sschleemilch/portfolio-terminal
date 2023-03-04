@@ -37,7 +37,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   );
 }
 
-export default (props) => {
+export default function Schleeshell(props) {
   return (
     <App {...props} />
   )
