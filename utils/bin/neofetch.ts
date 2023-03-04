@@ -146,8 +146,7 @@ export const neofetch = async (args?: string[]): Promise<string> => {
   const art = getArt();
   const info = getInfo();
 
-  return `
-  <table>
+  return `<table>
     <tr>
       <td>${art}</td>
       <td>${info}</td>

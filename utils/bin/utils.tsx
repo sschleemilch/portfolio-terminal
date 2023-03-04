@@ -13,20 +13,16 @@ export const repo = async (args?: string[]): Promise<string> => {
 export const banner = (args?: string[]): string => {
     const theme = getCurrentTheme()
     return `
-███████╗ ██████╗██╗  ██╗██╗     ███████╗███████╗███╗   ███╗██╗██╗      ██████╗██╗  ██╗
-██╔════╝██╔════╝██║  ██║██║     ██╔════╝██╔════╝████╗ ████║██║██║     ██╔════╝██║  ██║
-███████╗██║     ███████║██║     █████╗  █████╗  ██╔████╔██║██║██║     ██║     ███████║
-╚════██║██║     ██╔══██║██║     ██╔══╝  ██╔══╝  ██║╚██╔╝██║██║██║     ██║     ██╔══██║
-███████║╚██████╗██║  ██║███████╗███████╗███████╗██║ ╚═╝ ██║██║███████╗╚██████╗██║  ██║
-╚══════╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝╚═╝     ╚═╝╚═╝╚══════╝ ╚═════╝╚═╝  ╚═╝<span style="color: ${theme.green}">v${packageJson.version}</span>
+   _____      __    __               __         ____
+  / ___/_____/ /_  / /__  ___  _____/ /_  ___  / / /
+  \\__ \\/ ___/ __ \\/ / _ \\/ _ \\/ ___/ __ \\/ _ \\/ / /
+ ___/ / /__/ / / / /  __/  __(__  ) / / /  __/ / /
+/____/\\___/_/ /_/_/\\___/\\___/____/_/ /_/\\___/_/_/ (<span style="color: ${theme.green}">v${packageJson.version}</span>)
 
 A portfolio website in terminal style, just because I <span style="color: ${theme.red}"></span>  using and writing clean CLIs!
 
 ---
 ${cmd_info("Type 'help' to see list of available commands.")}
----
-
-A lot of credits to <a href="https://github.com/m4tt72/terminal">m4tt72</a> for providing the base!
 
 `;
   };
