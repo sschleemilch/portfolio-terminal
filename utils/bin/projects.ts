@@ -11,5 +11,5 @@ export const projects = async (args: string[]): Promise<string> => {
       (repo) =>
         `<span style="color: ${theme.yellow}"></span> ${repo.name} - <a class="underline" href="${repo.html_url}" target="_blank">${repo.html_url}</a>`,
     )
-    .join('\n');
+    .join('<br>');
 };

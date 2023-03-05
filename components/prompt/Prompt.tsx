@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useTheme } from '@/utils/themeProvider';
+import packageJson from '../../package.json';
+import { json } from 'stream/consumers';
 
 export const Prompt = () => {
   const [hostname, setHostname] = useState('');
@@ -25,7 +27,7 @@ export const Prompt = () => {
           color: theme.white,
         }}
       >
-      &nbsp;on&nbsp;
+      &nbsp;&nbsp;
       </span>
       <span
         style={{
@@ -34,13 +36,21 @@ export const Prompt = () => {
       >
         {hostname}
       </span>
-      &nbsp;with
+      &nbsp;
       <span
         style={{
           color: theme.cyan
         }}
       >
-      &nbsp; {theme.name}&nbsp;
+      &nbsp; {theme.name}
+      </span>
+      &nbsp;
+      <span
+        style={{
+          color: theme.blue
+        }}
+      >
+      &nbsp; v{packageJson.version}&nbsp;
       </span>
       <span
         style={{

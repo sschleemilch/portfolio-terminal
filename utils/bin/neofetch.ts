@@ -1,6 +1,7 @@
 import { formatDistanceToNow } from 'date-fns';
 import packageJson from '@/package.json';
 import { getCurrentTheme } from '../theme';
+import { pre_wrap } from '../commandOutput';
 
 const macos = `
                     'c.
@@ -104,11 +105,11 @@ const getArt = () => {
 
   switch (platform) {
     case 'MacOS':
-      return `<p style="color: ${mainColor}">${macos}</p>`;
+      return pre_wrap(macos, true, mainColor)
     case 'Windows':
-      return `<p style="color: ${mainColor}">${windows}</p>`;
+      return pre_wrap(windows, true, mainColor)
     case 'Linux':
-      return `<p style="color: ${mainColor}">${linux}</p>`;
+      return pre_wrap(linux, true, mainColor);
   }
 };
 
@@ -139,7 +140,7 @@ const getInfo = () => {
   message += `<span style="color: ${mainColor}">Uptime</span>: ${formatDistanceToNow(
     visitedAt,
   )}\n`;
-  return message;
+  return pre_wrap(message);
 };
 
 export const neofetch = async (args?: string[]): Promise<string> => {
@@ -151,6 +152,5 @@ export const neofetch = async (args?: string[]): Promise<string> => {
       <td>${art}</td>
       <td>${info}</td>
     <tr>
-  </table>
-  `;
+  </table>`;
 };

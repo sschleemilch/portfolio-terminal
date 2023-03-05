@@ -1,10 +1,10 @@
-import { cmd_info } from "../commandOutput";
+import { cmd_info, pre_wrap } from "../commandOutput";
 import { getCurrentTheme } from "../theme";
 
 export const resume = async (args?: string[]): Promise<string> => {
     const theme = getCurrentTheme()
 
-    return `  <span style="color: ${theme.blue}">  Work</span>
+    return pre_wrap(`  <span style="color: ${theme.blue}">  Work</span>
     |
     <span style="color: ${theme.yellow}">  2022-?</span>
     |  <span style="color: ${theme.blue}">BMW AG</span>
@@ -52,5 +52,5 @@ export const resume = async (args?: string[]): Promise<string> => {
     |  <span style="color: ${theme.blue}">FAU Erlangen</span>
     |  Mechatronics
     
-`
+`)
 };

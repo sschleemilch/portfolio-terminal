@@ -15,13 +15,10 @@ export const History: React.FC<Props> = ({ history }) => {
             <div className="flex-shrink">
               <Prompt />
             </div>
-
             <div className="flex-grow">{entry.command}</div>
           </div>
-
           <p
-            className="whitespace-pre-wrap m-2"
-            style={{ lineHeight: 'normal' }}
+            className="m-2"
             dangerouslySetInnerHTML={{ __html: entry.output }}
           />
         </div>

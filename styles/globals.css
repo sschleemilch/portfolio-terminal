@@ -30,6 +30,10 @@ div#__next > div {
   border-radius: 5px;
 }
 
+h1 {
+  margin-top: 5px;
+}
+
 a {
   text-decoration: underline;
 }

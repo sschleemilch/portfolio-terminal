@@ -1,5 +1,5 @@
 import { getWeather } from '../../apis';
-import { cmd_info } from '../commandOutput';
+import { cmd_info, pre_wrap } from '../commandOutput';
 
 export const weather = async (args: string[]): Promise<string> => {
   const city = args.join('+');
@@ -10,5 +10,5 @@ export const weather = async (args: string[]): Promise<string> => {
 
   const weather = await getWeather(city);
 
-  return weather;
+  return pre_wrap(weather);
 };

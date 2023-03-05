@@ -1,5 +1,5 @@
 import packageJson from '../../package.json'
-import { cmd_error, cmd_info } from '../commandOutput';
+import { cmd_error, cmd_info, pre_wrap } from '../commandOutput';
 import { getCurrentTheme } from '../theme';
 import * as bin from './index'
 
@@ -12,24 +12,28 @@ export const repo = async (args?: string[]): Promise<string> => {
 
 export const banner = (args?: string[]): string => {
     const theme = getCurrentTheme()
-    return `
-   _____      __    __               __         ____
+    
+    const ascii_art = pre_wrap(`   _____      __    __               __         ____
   / ___/_____/ /_  / /__  ___  _____/ /_  ___  / / /
   \\__ \\/ ___/ __ \\/ / _ \\/ _ \\/ ___/ __ \\/ _ \\/ / /
  ___/ / /__/ / / / /  __/  __(__  ) / / /  __/ / /
-/____/\\___/_/ /_/_/\\___/\\___/____/_/ /_/\\___/_/_/ (<span style="color: ${theme.green}">v${packageJson.version}</span>)
+/____/\\___/_/ /_/_/\\___/\\___/____/_/ /_/\\___/_/_/
 
-A portfolio website in terminal style, just because I <span style="color: ${theme.red}"></span>  using and writing clean CLIs!
+`);
 
----
-${cmd_info("Type 'help' to see list of available commands.")}
+    const description = `
+      A portfolio website in terminal style, just because I <span style="color: ${theme.red}"></span>  using and writing clean CLIs!
+      <br>
+      ---
+      <br>
+      ${cmd_info("Type 'help' to see list of available commands.")}`;
 
-`;
-  };
+    return ascii_art + description
+};
 
 export const help = async (args: string[]): Promise<string> => {
     const commands = Object.keys(bin).sort().join(', ');
-    return `${cmd_info("Available commands")}\n${commands}\n\n${cmd_info("Keybindings")}\n[tab]\t trigger completion.\n[ctrl+l] clear terminal.\n[ctrl+c] cancel command.`;
+    return `${cmd_info("Available commands")}<br>${commands}<br><br>${cmd_info("Keybindings")}<br>[tab]\t trigger completion.<br>[ctrl+l] clear terminal.<br>[ctrl+c] cancel command.`;
 };
 
 export const whoami = async (args: string[]): Promise<string> => {
