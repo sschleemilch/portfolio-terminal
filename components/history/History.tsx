@@ -11,12 +11,8 @@ export const History: React.FC<Props> = ({ history }) => {
     <>
       {history.map((entry: HistoryInterface, index: number) => (
         <div key={entry.command + index}>
-          <div className="flex flex-row space-x-2">
-            <div className="flex-shrink">
-              <Prompt />
-            </div>
-            <div className="flex-grow">{entry.command}</div>
-          </div>
+          <Prompt />
+          {entry.command}
           <p
             className="m-2"
             dangerouslySetInnerHTML={{ __html: entry.output }}

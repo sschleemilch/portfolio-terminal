@@ -93,11 +93,10 @@ export const Input = ({ inputRef, containerRef }) => {
   };
 
   return (
-    <div className="flex flex-row space-x-2">
-      <label htmlFor="prompt" className="flex-shrink">
+    <>
+      <label htmlFor="prompt">
         <Prompt />
       </label>
-
       <input
         ref={inputRef}
         id="prompt"
@@ -116,7 +115,7 @@ export const Input = ({ inputRef, containerRef }) => {
         autoCorrect="off"
         autoCapitalize="off"
       />
-    </div>
+    </>
   );
 };
 

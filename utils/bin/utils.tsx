@@ -13,12 +13,12 @@ export const repo = async (args?: string[]): Promise<string> => {
 export const banner = (args?: string[]): string => {
     const theme = getCurrentTheme()
     
-    const ascii_art = pre_wrap(`   _____      __    __               __         ____
+    const ascii_art = pre_wrap(`<b>   _____      __    __               __         ____
   / ___/_____/ /_  / /__  ___  _____/ /_  ___  / / /
   \\__ \\/ ___/ __ \\/ / _ \\/ _ \\/ ___/ __ \\/ _ \\/ / /
  ___/ / /__/ / / / /  __/  __(__  ) / / /  __/ / /
 /____/\\___/_/ /_/_/\\___/\\___/____/_/ /_/\\___/_/_/
-
+</b>
 `);
 
     const description = `
