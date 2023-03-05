@@ -28,11 +28,9 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
       </Head>
 
       <div
-        className="overflow-hidden h-full rounded"
+        className="overflow-hidden h-full"
         style={{
-          borderColor: theme.yellow,
-          padding: config.border ? 16 : 8,
-          borderWidth: config.border ? 3: 0,
+          padding: 16,
         }}
       >
         <div ref={containerRef} className="overflow-y-auto h-full">

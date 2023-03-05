@@ -11,16 +11,22 @@ const Layout: React.FC<Props> = ({ children, onClick }) => {
 
   return (
     <div
-      className="min-w-max text-xs md:min-w-full md:text-base"
+      className="grid place-items-center h-full w-full overflow-hidden bg-transparent"
       onClick={onClick}
       style={{
         color: theme.foreground,
+        position: "absolute",
+        top: 0,
+        left: 0
       }}
     >
       <main
-        className="w-full h-full p-2"
+        className="w-full h-full xl:w-3/4 xl:h-3/4 rounded-xl shadow-lg overflow-hidden"
         style={{
           background: theme.background,
+          borderColor: theme.yellow,
+          borderWidth: 4,
+          margin: 16
         }}
       >
         {children}
