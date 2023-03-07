@@ -21,7 +21,7 @@ const Layout: React.FC<Props> = ({ children, onClick }) => {
       }}
     >
       <main
-        className="w-full h-full xl:w-2/3 xl:h-3/4 rounded-xl shadow-lg overflow-hidden"
+        className="w-full h-full xl:w-3/4 xl:h-3/4 xl:rounded-xl shadow-lg overflow-hidden"
         style={{
           background: theme.background,
           borderColor: theme.yellow,
