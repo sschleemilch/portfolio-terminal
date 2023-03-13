@@ -2,6 +2,8 @@
 
 Credits to [m4tt74](https://github.com/m4tt72/terminal)!
 
+![image](https://user-images.githubusercontent.com/12069137/224752191-c5f9ee24-b4b6-4ab3-9425-adf3ee0ff1eb.png)
+
 ## Usage
 
 1. Install dependencies:
