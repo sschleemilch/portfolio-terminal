@@ -5,8 +5,11 @@ export const resume = async (args?: string[]): Promise<string> => {
     const theme = getCurrentTheme()
 
     return pre_wrap(`  <span style="color: ${theme.blue}">  Work</span>
+    <span style="color: ${theme.yellow}">  2024-?</span>
+    |  <span style="color: ${theme.blue}">BMW AG</span>
+    |  Research Software Engineer
     |
-    <span style="color: ${theme.yellow}">  2022-?</span>
+    <span style="color: ${theme.yellow}">  2022-2024</span>
     |  <span style="color: ${theme.blue}">BMW AG</span>
     |  Software Build & CI Expert
     |  k8s, GitHub, Bazel, AWS, Artifactory, Zuul, Python, C++, Go, ...

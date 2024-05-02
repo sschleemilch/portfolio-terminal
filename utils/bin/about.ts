@@ -6,7 +6,7 @@ export const about = async (args?: string[]): Promise<string> => {
   return `
     <h1 style="color: ${theme.blue}"> About</h1>
     I am a passionate Software Developer who loves new challenges and getting into new unknown software and hardware related domains.
-    Currently I am in depth into large scaling DevOps solutions for Autonomous Driving Systems.
+    Currently I am working in research in the domain of software defined vehicles.
 
     <h1 style="color: ${theme.blue}"> Coding</h1>
     I love to code. Professionally and in private. Amazed to solve new challenges everyday and to solve everyday problems in private
